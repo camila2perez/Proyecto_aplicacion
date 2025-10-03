@@ -77,25 +77,37 @@ Entregable Específico: Tras subir una obra, el admin recibe una notificación (
 
 
 ## Sprint 3 (Semana 5-6): Integración con Blockchain
-Objetivo: Emitir un NFT real upon approval.
-Tareas Críticas Backend: Configurar Web3.js con provider de Mumbai, desplegar Smart	Contract	ERC-721	simple,	crear servicio blockchainService.mintNFT(artworkId, artistWalletAddress).
-Tareas Críticas Frontend: Modificar el flujo de aprobación para que, al hacer click "Aprobar", el backend ejecute mintNFT y actualice la obra con la dirección del contrato y el token ID.
-Entregable Específico: El admin puede aprobar una obra y se genera un NFT real en Mumbai. La página de detalle de la obra muestra la dirección del contrato y el token ID.
-Sprint 4 (Semana 7-8): Refinamiento, Testing y Despliegue
-Objetivo: Tener un MVP desplegado y usable.
-Tareas Críticas: Implementar la Galería Pública con paginación, mejorar masivamente el UI/UX con Tailwind CSS, escribir pruebas unitarias para servicios críticos (auth, upload), configurar despliegue en Vercel (Frontend) y Railway/Render (Backend y BD).
-Entregable Específico: La aplicación está en producción. Un usuario anónimo puede ver la galería. Un artista puede registrarse, subir una obra y verla certificada con NFT tras ser aprobada.
+
+Objetivo: Emitir un NFT real upon approval.
+
+Tareas Críticas Backend: Configurar Web3.js con provider de Mumbai, desplegar Smart	Contract	ERC-721	simple,	crear servicio blockchainService.mintNFT(artworkId, artistWalletAddress).
+
+Tareas Críticas Frontend: Modificar el flujo de aprobación para que, al hacer click "Aprobar", el backend ejecute mintNFT y actualice la obra con la dirección del contrato y el token ID.
+
+Entregable Específico: El admin puede aprobar una obra y se genera un NFT real en Mumbai. La página de detalle de la obra muestra la dirección del contrato y el token ID.
+
+
+## Sprint 4 (Semana 7-8): Refinamiento, Testing y Despliegue
+
+Objetivo: Tener un MVP desplegado y usable.
+
+Tareas Críticas: Implementar la Galería Pública con paginación, mejorar masivamente el UI/UX con Tailwind CSS, escribir pruebas unitarias para servicios críticos (auth, upload), configurar despliegue en Vercel (Frontend) y Railway/Render (Backend y BD).
+
+Entregable Específico: La aplicación está en producción. Un usuario anónimo puede ver la galería. Un artista puede registrarse, subir una obra y verla certificada con NFT tras ser aprobada.
 
 
 ### 5.Plan de Pruebas Específico
+
 Pruebas Unitarias (Jest):
 Servicio de utilidad que calcula el hash de una imagen.
 Servicio que formatea los metadatos para la blockchain.
 Lógica de validación de contraseñas.
+
 Pruebas de Integración (Supertest):
 Flujo completo de registro -> login -> obtención de token.
 Flujo de subida de obra (mockeando el upload a S3 y la llamada a la IA).
 Endpoint de aprobación de admin (mockeando la transacción a blockchain).
+
 Pruebas E2E (Cypress o Playwright):
 Un usuario completa el registro.
 Un usuario sube una obra.
